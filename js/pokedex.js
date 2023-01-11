@@ -1,73 +1,40 @@
 const prevBtn = document.getElementById('prev')
 const nextBtn = document.getElementById('next')
-
-    const pokeWrapperDiv = document.getElementById('divWrapper') 
-
-
+const pokeWrapperDiv = document.getElementById('divWrapper') 
 let pokemons = []
 const baseUrl = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=150"
 let nextUrl = ""
 let prevUrl = ""
 
-
-async function getAllPoke(link) {
+async function getAllPokeLinks(url) {
     try {
-        const response = await fetch(`${link}`);
+        const response = await fetch(`${url}`);
         const data = await response.json();
-        
-        pokemons.push(data);
-
+        pokemons = data.results;
+        nextUrl = data.next
+        prevUrl = data.previous
+        document.dispatchEvent(new Event('pokemonsFetched'));
     } catch (error) {
         console.error(error);
     }
 }
+document.addEventListener('pokemonsFetched', displayPokemons);
 
+function displayPokemons() {
+    pokeWrapperDiv.innerHTML = ""
+    pokemons.forEach( pokemon =>{
+        pokeWrapperDiv.innerHTML += `
+        <li>${pokemon.name}</li>`
+    })}
 
+getAllPokeLinks(baseUrl)
 
-console.log(pokemons)
+prevBtn.addEventListener('click', function() {
+    pokemons = []
+    getAllPokeLinks(prevUrl)
+});
 
-    async function getAllPokeLinks(url) {
-        try {
-            const response = await fetch(`${url}`);
-            const data = await response.json();
-            
-
-            data.results.forEach(element => {
-                getAllPoke(element.url)
-
-            });
-            //console.log(data.next)
-            nextUrl = data.next
-            prevUrl = data.previous
-            
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
-    getAllPokeLinks(baseUrl)
-
-
-
-    function displayPokemons() {
-        console.log(pokemons)
-        pokemons.forEach( pokemon =>{
-            pokeWrapperDiv.innerHTML = `
-            <p>${pokemon.name}</p>`
-        })
-    }
-    
-    
-    
-    prevBtn.addEventListener('click', function() {
-        pokemons.splice(0, 150,)
-        getAllPokeLinks(prevUrl)
-        displayPokemons();
-        
-    });
-    
-    nextBtn.addEventListener('click', function() {
-        pokemons.splice(0, 150,)
-        getAllPokeLinks(nextUrl)
-        displayPokemons();
-    });
+nextBtn.addEventListener('click', function() {
+    pokemons = []
+    getAllPokeLinks(nextUrl)
+});
