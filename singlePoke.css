@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("image/pokedex.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#gauche {
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#gauche div{
+    width: 40%;
+    height: 14%;
+    background-color: white;
+    opacity: 50%;
+}
+
+#milieu{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#droite{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#haut{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#haut h1{
+    text-align: center;
+}
+
+#divImg{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgPoke{
+    width: 80%;
+    height: auto;
+}
+
+#imgPokeShiny{
+    display: none;
+    width: 80%;
+    height: auto;
+}
+
+#bas{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bas div{
+    width: 25%;
+    height: 75%;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bas div:hover{
+    opacity: 80%;
+}
+
+#droite div {
+    height: 75%;
+    width: 50%;
+    background-color: white;
+    opacity: 60%;
+    border-radius: 5px;
+}
