@@ -55,3 +55,7 @@ body {
     border-radius: 10px;
     padding-bottom: 10px;
 }
+
+.poke:hover{
+    background-color: lightblue;
+}

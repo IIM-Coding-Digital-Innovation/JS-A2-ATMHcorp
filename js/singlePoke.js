@@ -34,7 +34,7 @@ async function getpokebyid() {
                     <div id="infos" >
                         <p>Numéro : <span> ${data.id}</span></p>
                         <div id="types" >
-                            <p>Types :</p>
+                            <p>Types </p>
                             <div id="type">
                             
                             </div>
@@ -94,18 +94,28 @@ async function getpokebyid() {
         const imgPokeShiny = document.getElementById('imgPokeShiny');
         const body = document.getElementById('body')
 
-
-        window.addEventListener("keyup", function(event) {
-            if (event.key == 's') {
-                imgPoke.classList.add('active')
-                imgPokeShiny.classList.remove('active')
-                body.classList.remove('bgbase')
-                body.classList.add('bgshinny')
-            }   else if (event.key == 'n') {
-                imgPokeShiny.classList.add('active')
-                imgPoke.classList.remove('active')
-                body.classList.add('bgbase')
-                body.classList.remove('bgshinny')
+        document.addEventListener('keyup', function(e) {
+            if (e.key === 's') {
+                document.addEventListener('keyup', function(e) {
+                    if (e.key === 'h') {
+                        document.addEventListener('keyup', function (e) {
+                            if (e.key === 'i') {
+                                document.addEventListener('keyup', function (e){
+                                    if (e.key === 'n') {
+                                        document.addEventListener('keyup', function (e){
+                                            if (e.key === 'y'){
+                                                imgPoke.classList.add('active')
+                                                imgPokeShiny.classList.remove('active')
+                                                body.classList.remove('bgbase')
+                                                body.classList.add('bgshinny')
+                                            }
+                                        })
+                                    }
+                                })
+                            }
+                        })
+                    }
+                });
             }
         });
 
@@ -125,6 +135,29 @@ async function getpokebyid() {
             info.classList.toggle('active');
             stats.classList.toggle('active');
         })
+
+
+        // clique = baston
+
+        const messageMechant = document.getElementById('milieu')
+
+        let i = 0
+
+        imgPoke.addEventListener('click', function () {
+            i++
+            if (i == 5) {
+                messageMechant.innerHTML +=
+                    `<div id="message1" class="message">
+                    <p>Ca vient d'ou mon frérot ?</p>
+                </div>`
+            }
+
+
+
+
+        })
+
+
 
 
     } catch (error) {
