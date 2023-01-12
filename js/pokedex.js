@@ -34,7 +34,7 @@ async function getEachPoke(url) {
     const data = await response.json();
 
     pokeWrapperDiv.innerHTML += `
-    <a href="singlePoke.html?id=${data.id}">
+    <a href="singlePoke.html?id=${data.id}" class="poke">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png">
         <p>${data.name}</p>
     </a>

@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-image: url("image/fond.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #divWrapper {
@@ -18,6 +25,7 @@
     text-align: center;
     color: #333333;
     text-decoration: none;
+    font-size: 10px;
 }
 .buttonWrapper {
     display: flex;
@@ -39,4 +47,11 @@
     color: #FFF;
     background-color: #68A090;
     border: 1px solid #44685E;
+}
+
+.poke{
+    background-color: rgba(173, 216, 230, 0.78);
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
 }

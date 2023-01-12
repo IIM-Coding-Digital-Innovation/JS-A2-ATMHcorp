@@ -1,9 +1,11 @@
 const dexContainer = document.getElementById("pokedex")
 //const dexleftcont  = document.getElementById("droite")
-//const idpoke = url.searchParams.get("idpoke");
+var urlParams = new URLSearchParams(location.search);
+const id = urlParams.get('id')
+
 async function getpokebyid() {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/6`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
         const data = await response.json();
 
 
