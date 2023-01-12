@@ -1,13 +1,15 @@
 const dexContainer = document.getElementById("milieu");
 const dexleftcont  = document.getElementById("gauche");
 
+
+
 //const idpoke = url.searchParams.get("idpoke");
 async function getpokebyid() {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/6`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/151`);
         const data = await response.json();
 
-        console.log(data)
+
 
 
         dexContainer.innerHTML = "";
@@ -15,9 +17,14 @@ async function getpokebyid() {
                 `<div id="haut">
                         <h2>${data.name}</h2>
                 </div>
-                <div id="divImg" ondragstart="dragStart(event)">
+                <div id="divImg" >
+                    <div id="divImgdrag">
+                    <img id="imgPokedrag${data.id}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png" alt="">
+                    </div>
                     <img id="imgPoke" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png" alt="">
+                   
                 </div>
+                
                 <div id="bas">
                     <div></div>
                     <div></div>
@@ -26,7 +33,7 @@ async function getpokebyid() {
         dexleftcont.innerHTML = "";
         dexleftcont.innerHTML +=
             `
-            <div class="team_element"</div>
+            <div class="team_element"></div>
             <div class="team_element"></div>
             <div class="team_element"></div>
             <div class="team_element"></div>
@@ -36,13 +43,16 @@ async function getpokebyid() {
 
 
 
-            var drag = document.getElementById("divImg");
+            var drag = document.getElementById("divImgdrag");
             drag.draggable = "true";
             drag.addEventListener("dragstart", dragbeg);
             var team = document.querySelectorAll(".team_element");
             for(let element of team){
+                element.addEventListener("dragstart", dragbeg)
                 element.addEventListener("dragover", autoriserDrop);
                 element.addEventListener("drop", drop);
+
+
             }
 
 
@@ -59,6 +69,7 @@ async function getpokebyid() {
             var datapoke = event.dataTransfer.getData("team");
             event.target.appendChild(document.getElementById(datapoke));
             console.log(datapoke)
+
         }
 
 
@@ -68,7 +79,13 @@ async function getpokebyid() {
     }
 }
 
+localStorage.setItem("team_content", dexleftcont);
+console.log(localStorage)
+
+
 getpokebyid()
+
+
 
 // SHINY
 
