@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#divWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0 30px;
+    justify-content: center;
+}
+#divWrapper > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #333333;
+    text-decoration: none;
+}
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+.buttonWrapper > button {
+    margin: 10px;
+    padding: 5px 8px 5px 8px;
+    display: inline-block;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 13px;
+    font-family: "helvetica neue", Helvetica, Verdana, sans-serif;
+    color: #FFF;
+    background-color: #68A090;
+    border: 1px solid #44685E;
+}
