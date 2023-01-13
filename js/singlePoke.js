@@ -1,6 +1,6 @@
 const dexContainer = document.getElementById("pokedex")
 //const dexleftcont  = document.getElementById("droite")
-var urlParams = new URLSearchParams(location.search);
+let urlParams = new URLSearchParams(location.search);
 const id = urlParams.get('id')
 
 async function getpokebyid() {
@@ -9,17 +9,17 @@ async function getpokebyid() {
         const data = await response.json();
 
 
-        console.log(data)
+        //console.log(data)
 
         dexContainer.innerHTML = "";
             dexContainer.innerHTML +=
                 `<div id="gauche">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="team_element slot1"></div>
+                    <div class="team_element slot2"></div>
+                    <div class="team_element slot3"></div>
+                    <div class="team_element slot4"></div>
+                    <div class="team_element slot5"></div>
+                    <div class="team_element slot6"></div>
                 </div>
                 <div id="milieu">
                     <div id="haut">
@@ -125,15 +125,69 @@ async function getpokebyid() {
             info.classList.toggle('active');
             stats.classList.toggle('active');
         })
-
+        drag()
 
     } catch (error) {
-        dexContainer.innerHTML = `<p>${error.message}</p>`;
+        console.error(error);
     }
 }
+function drag() {
+    const drag = document.getElementById("imgPoke");
+    drag.draggable = true;
 
+    drag.addEventListener("dragstart", dragbeg);
+    let team = document.querySelectorAll(".team_element");
+    for(let element of team){
+        element.addEventListener("dragstart", dragbeg)
+        element.addEventListener("dragover", autoriserDrop);
+        element.addEventListener("drop", drop);
+    }
+
+
+
+
+    function dragbeg(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+    function autoriserDrop(event) {
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "move";
+    }
+    function drop(event) {
+        event.preventDefault();
+        const datapoke = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(datapoke));
+
+
+        let pokeArray = localStorage.getItem('myTeamArray')
+        let pokeArrayParse = JSON.parse(pokeArray)
+
+        pokeArrayParse.push(id)
+        console.log(pokeArrayParse)
+
+
+        let pokeArrayString = JSON.stringify(pokeArrayParse)
+        localStorage.setItem('myTeamArray', pokeArrayString)
+
+
+        //let localId = localStorage.getItem('pokeId');
+        console.log(localStorage)
+    }
+    async function displayTeam(teamId) {
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${teamId}`);
+            const data = await response.json();
+
+
+
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+}
 getpokebyid()
-
 
 
 
