@@ -17,6 +17,7 @@ body {
     gap: 15px;
     margin: 0 30px;
     justify-content: center;
+
 }
 #divWrapper > a {
     display: flex;
@@ -31,22 +32,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 45px;
     margin-top: 50px;
 }
 .buttonWrapper > button {
     margin: 10px;
-    padding: 5px 8px 5px 8px;
+    padding: 10px 16px 10px 16px;
     display: inline-block;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -o-border-radius: 6px;
-    font-size: 13px;
+    font-size: 20px;
     font-family: "helvetica neue", Helvetica, Verdana, sans-serif;
     color: #FFF;
-    background-color: #68A090;
-    border: 1px solid #44685E;
+    background-color: rgba(255, 255, 255, 0.11);
+    border: 1px solid white;
 }
 
 .poke{
@@ -56,6 +57,57 @@ body {
     padding-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .poke:hover{
     background-color: lightblue;
 }
+=======
+
+.menu{
+    text-align: center;
+}
+.videomenu{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        overflow: hidden;
+}
+
+.videomenu::-webkit-media-controls {
+    display: none !important;
+}
+
+.h1menu{
+    position: absolute;
+    color: white;
+    z-index: 50;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: fade 1.5s linear infinite;
+}
+
+    @keyframes fade {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .audio{
+        position: absolute;
+        top: 90%;
+        left: 90%;
+        transform: translate(-50%,-50%);
+        z-index: 50;
+    }
+>>>>>>> origin/thomas

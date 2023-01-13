@@ -12,11 +12,22 @@
 </head>
 <body>
 
+    <audio class="audio" id="audio" controls loop>
+        <source src="audio/musiquefond.mp3" type="audio/mp3">
+    </audio>
+<script src="js/play.js"></script>
+    <div class="menu" id="menu">
+        <h1 class="h1menu">Press "enter" to start</h1>
+        <video class="videomenu" src="video/menu.mp4" autoplay loop muted controls>
+            <script src="js/start.js"></script>
+        </div>
+ 
     <div id="divWrapper"></div>
     <div class="buttonWrapper">
         <button id="prev">Previous</button>
         <button id="next">Next</button>
     </div>
+
     <script src="js/pokedex.js"></script>
 </body>
 </html>

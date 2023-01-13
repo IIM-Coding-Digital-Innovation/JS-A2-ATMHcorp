@@ -58,5 +58,5 @@ nextBtn.addEventListener('click', function() {
     getAllPokeLinks(nextUrl)
 });
 
-
+console.log(pokemons)
 
