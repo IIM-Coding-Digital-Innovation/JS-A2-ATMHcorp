@@ -5,7 +5,7 @@
 <h2>Résumé du projet:<h2><br>
 
 <h2>Répartition du travail:<h2>
-  <div style="display:grid; grid-column:4;">
+  <div style="display:flex;">
     <div>
       <h4>Thomas:</h4>
       <p>-Powerpoint <br>-Afficher tous les pokemons (Arhur&Thomas)<br>-Ecran de lancement (Press enter) & Musique (play/pause)<br>-Background-color selon le type du pokemon (Hugo&Thomas)<br>-Racket au clic(Hugo&Thomas)</p></div>  
