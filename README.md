@@ -8,7 +8,7 @@
   <div style="display:flex">
     <div>
       <h3>Thomas:</h3>
-      <p>-wee<br>-wee</p></div>  
+      <p>-Powerpoint <br>-Afficher tous les pokemons (Arhur&Thomas)<br>-Ecran de lancement (Press enter) & Musique (play/pause)<br>-Background-color selon le type du pokemon (Hugo&Thomas)<br>-Racket au clic(Hugo&Thomas)</p></div>  
   </div>
 
 <h1> Thomas </h1>
