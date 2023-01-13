@@ -148,7 +148,7 @@ async function getpokebyid() {
             if (i == 5) {
                 messageMechant.innerHTML +=
                     `<div id="message1" class="message">
-                    <p>salutations</p>
+                    <p>Sympa tes baskets, tu me les files ? :)<br> Sinon petit <span style="color:red;">${data.abilities[0].ability.name}</span> dans ta tronche</p>
                 </div>`;
             }
             console.log(i)
