@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: #333333;
+    color: black;
     text-decoration: none;
     font-size: 10px;
 }
@@ -50,17 +50,173 @@ body {
     border: 1px solid white;
 }
 
-.poke{
-    background-color: rgba(173, 216, 230, 0.78);
+.water{
     margin-top: 10px;
     border-radius: 10px;
     padding-bottom: 10px;
+    background-color: rgba(0, 0, 255, 0.381);
+}
+
+.water:hover{
+    background-color: rgb(0, 0, 255);
+}
+
+.fire{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(238, 116, 29, 0.629);
+}
+
+.fire:hover{
+    background-color: rgb(238, 116, 29);
+}
+
+.grass{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(4, 183, 63, 0.381);
+}
+
+.grass:hover{
+    background-color: rgb(4, 183, 64);
+}
+
+.bug{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(202, 251, 25, 0.523);
+}
+
+.bug:hover{
+    background-color: rgb(202, 251, 25);
+}
+
+.poison{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(199, 0, 249, 0.381);
+}
+
+.poison:hover{
+    background-color: rgb(199, 0, 249);
+}
+
+.normal{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(105, 107, 109, 0.662);
+}
+
+.normal:hover{
+    background-color: rgb(105, 107, 109);
 }
 
 
-.poke:hover{
-    background-color: lightblue;
+.electric{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(205, 255, 23, 0.493);
 }
+
+.electric:hover{
+    background-color: rgb(205, 255, 23);
+}
+
+.ground{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(83, 61, 32, 0.632);
+}
+
+.ground:hover{
+    background-color: rgb(83, 61, 32);
+}
+
+.fairy{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(203, 45, 150, 0.381);
+}
+
+.fairy:hover{
+    background-color: rgba(203, 45, 150, 0.981);
+}
+
+.fighting{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 5, 5, 0.527);
+}
+
+.fighting:hover{
+    background-color: rgba(255, 5, 5, 0.995);
+}
+
+.rock{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(67, 71, 68, 0.577);
+}
+
+.rock:hover{
+    background-color: rgba(67, 71, 68, 0.975);
+}
+
+.psychic{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(204, 54, 117, 0.61);
+}
+
+.psychic:hover{
+    background-color: rgba(204, 54, 117, 0.992);
+}
+
+.ghost{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.456);
+}
+
+.ghost:hover{
+    background-color: rgba(255, 255, 255, 0.999);
+}
+
+.dragon{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(14, 3, 142, 0.381);
+}
+
+.dragon:hover{
+    background-color: rgba(15, 3, 142, 0.999);
+}
+
+
+.ice{
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 208, 255, 0.381);
+}
+
+.ice:hover{
+    background-color: rgba(0, 208, 255, 0.999);
+}
+
 
 
 .menu{
