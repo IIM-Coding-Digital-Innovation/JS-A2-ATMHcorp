@@ -3,6 +3,12 @@ const dexContainer = document.getElementById("pokedex")
 let urlParams = new URLSearchParams(location.search);
 const id = urlParams.get('id')
 
+
+if (localStorage.getItem('myTeamArray') == null) {
+    let dictionnary = []
+    localStorage.setItem('myTeamArray', JSON.stringify(dictionnary))
+}
+
 async function getpokebyid() {
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -127,6 +133,7 @@ async function getpokebyid() {
         })
         drag()
 
+
     } catch (error) {
         console.error(error);
     }
@@ -161,9 +168,9 @@ function drag() {
 
         let pokeArray = localStorage.getItem('myTeamArray')
         let pokeArrayParse = JSON.parse(pokeArray)
+        console.log(pokeArrayParse)
 
         pokeArrayParse.push(id)
-        console.log(pokeArrayParse)
 
 
         let pokeArrayString = JSON.stringify(pokeArrayParse)
@@ -172,22 +179,47 @@ function drag() {
 
         //let localId = localStorage.getItem('pokeId');
         console.log(localStorage)
+
     }
-    async function displayTeam(teamId) {
-        try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${teamId}`);
-            const data = await response.json();
+}
+/*
+function displayTeam() {
+    let showarraypoke = localStorage.getItem("myTeamArray");
+    let showarraypokeparse = JSON.parse(showarraypoke);
+    let Teamdisplay1 = document.querySelectorAll(".team_element");
+    console.log(showarraypokeparse)
 
 
+    for (let i = 0; i < showarraypokeparse.length; i++) {
 
+        var pic_poke = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+ showarraypokeparse[i] +".png";
+        let solopoke = document.createElement("img");
+        Teamdisplay1.appendChild(solopoke)
+        solopoke.src = pic_poke ;
 
-        } catch (error) {
-            console.error(error);
+        for (let i = 0; i < Teamdisplay1.length; i++) {
+            Teamdisplay1.innerHTML = `
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${Teamdisplay1[i]}.png"/>
+            `
         }
     }
 
 }
+*/
+const delBtn = document.getElementById('delBtn')
+
+delBtn.addEventListener('click', function (){
+    localStorage.clear()
+    console.log(localStorage)
+})
 getpokebyid()
+
+
+
+
+
+
+
 
 
 
