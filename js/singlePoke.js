@@ -104,10 +104,10 @@ async function getpokebyid() {
                                     if (e.key === 'n') {
                                         document.addEventListener('keyup', function (e){
                                             if (e.key === 'y'){
-                                                imgPoke.classList.add('active')
-                                                imgPokeShiny.classList.remove('active')
-                                                body.classList.remove('bgbase')
-                                                body.classList.add('bgshinny')
+                                                imgPoke.classList.toggle('active')
+                                                imgPokeShiny.classList.toggle('active')
+                                                body.classList.toggle('bgbase')
+                                                body.classList.toggle('bgshinny')
                                             }
                                         })
                                     }
@@ -148,9 +148,10 @@ async function getpokebyid() {
             if (i == 5) {
                 messageMechant.innerHTML +=
                     `<div id="message1" class="message">
-                    <p>Ca vient d'ou mon frérot ?</p>
-                </div>`
+                    <p>salutations</p>
+                </div>`;
             }
+            console.log(i)
 
 
 

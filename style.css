@@ -267,3 +267,7 @@ body {
         z-index: 50;
     }
 
+.active{
+    display: none;
+}
+
