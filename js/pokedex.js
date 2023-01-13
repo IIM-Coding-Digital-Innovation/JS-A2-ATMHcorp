@@ -24,7 +24,7 @@ async function getAllPokeLinks(url) {
             getEachPoke(item)
         })
 
-        console.log(pokemonsUrl)
+        console.log(pokemons)
     } catch (error) {
         console.error(error);
     }
