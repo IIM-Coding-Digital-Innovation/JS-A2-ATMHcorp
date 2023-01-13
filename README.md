@@ -10,5 +10,9 @@
       <h3>Thomas:</h3>
       <p>-Powerpoint <br>-Afficher tous les pokemons (Arhur&Thomas)<br>-Ecran de lancement (Press enter) & Musique (play/pause)<br>-Background-color selon le type du pokemon (Hugo&Thomas)<br>-Racket au clic(Hugo&Thomas)</p></div>  
   </div>
+  <div>
+    <h3>Arthur:</h3>
+    <p>-Lead du projet<br>-Afficher tous les pokémons(Thomas&Arthur)<br>-Drag&Drop et LocalStorage (Marvin&Arthur)</p>
+  </div>
 
 <h1> Thomas </h1>
