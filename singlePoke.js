@@ -2,15 +2,10 @@ const dexContainer = document.getElementById("milieu");
 const dexleftcont  = document.getElementById("gauche");
 
 
-
-//const idpoke = url.searchParams.get("idpoke");
 async function getpokebyid() {
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/151`);
         const data = await response.json();
-
-
-
 
         dexContainer.innerHTML = "";
             dexContainer.innerHTML +=
@@ -30,6 +25,7 @@ async function getpokebyid() {
                     <div></div>
                     <div></div>
                 </div> `;
+
         dexleftcont.innerHTML = "";
         dexleftcont.innerHTML +=
             `
@@ -43,7 +39,10 @@ async function getpokebyid() {
 
 
 
+
+
             var drag = document.getElementById("divImgdrag");
+
             drag.draggable = "true";
             drag.addEventListener("dragstart", dragbeg);
             var team = document.querySelectorAll(".team_element");
@@ -51,8 +50,6 @@ async function getpokebyid() {
                 element.addEventListener("dragstart", dragbeg)
                 element.addEventListener("dragover", autoriserDrop);
                 element.addEventListener("drop", drop);
-
-
             }
 
 
@@ -68,9 +65,10 @@ async function getpokebyid() {
             event.preventDefault();
             var datapoke = event.dataTransfer.getData("team");
             event.target.appendChild(document.getElementById(datapoke));
-            console.log(datapoke)
+
 
         }
+
 
 
 
@@ -80,10 +78,22 @@ async function getpokebyid() {
 }
 
 localStorage.setItem("team_content", dexleftcont);
+localStorage.setItem("team_content", JSON.stringify(dexleftcont));
+
 console.log(localStorage)
 
 
+
+
+
+
 getpokebyid()
+
+
+
+
+
+
 
 
 
