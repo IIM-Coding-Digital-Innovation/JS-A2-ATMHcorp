@@ -24,7 +24,7 @@ async function getAllPokeLinks(url) {
             getEachPoke(item)
         })
 
-        console.log(pokemons)
+        //console.log(pokemonsUrl)
     } catch (error) {
         console.error(error);
     }
@@ -61,5 +61,7 @@ nextBtn.addEventListener('click', function() {
     getAllPokeLinks(nextUrl)
 });
 
+
+console.log(localStorage)
 console.log(pokemons)
 
