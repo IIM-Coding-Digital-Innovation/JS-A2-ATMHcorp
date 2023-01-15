@@ -22,7 +22,3 @@
       <p>-Drag&Drop et LocalStorage (Arthur&Marvin)<br>-Afficher SinglePage</p></div>  
   </div>
   
-  
-  
-
-<h1> Thomas </h1>
