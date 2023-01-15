@@ -13,10 +13,11 @@
     <div>
       <h4>Thomas:</h4>
       <p>-Powerpoint <br>-Afficher tous les pokemons (Arhur&Thomas)<br>-Ecran de lancement (Press enter) & Musique (play/pause)<br>-Background-color selon le type du pokemon (Hugo&Thomas)<br>-Racket au clic(Hugo&Thomas)</p></div>  
-  </div>
+    <div>
   <h4>Hugo:</h4>
       <p>-Background-color selon le type du pokemon (Hugo&Thomas)<br>-Racket au clic (Hugo&Thomas)<br>-SinglePage pokemon<br>-Animation shiny/background</p></div>  
   </div>
+  <div>
   <h4>Marvin:</h4>
       <p>-Drag&Drop et LocalStorage (Arthur&Marvin)<br>-Afficher SinglePage</p></div>  
   </div>
