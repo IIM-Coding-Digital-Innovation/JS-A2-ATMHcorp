@@ -2,7 +2,7 @@
 
 <h1>ATMHcorp</h1>
 
-<h2>Résumé du projet:<h2><br>
+<h2>Lien du projet: https://filholthomas.com/pokedex/<h2><br>
 
 <h2>Répartition du travail:<h2>
   <div style="display:flex;">
