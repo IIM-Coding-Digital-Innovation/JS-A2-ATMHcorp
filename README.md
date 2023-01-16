@@ -2,10 +2,11 @@
 
 <h1>ATMHcorp</h1>
 
-<h2>Lien du projet: https://filholthomas.com/pokedex/<h2><br>
+<h2>Lien du projet: https://athm-corp-pokedex.vercel.app/pokedex.html<h2><br>
+<hr>
 
 <h2>Répartition du travail:<h2>
-  <div style="display:flex;">
+  <div>
     <div>
     <h4>Arthur:</h4>
     <p>-Lead du projet<br>-Afficher tous les pokémons(Thomas&Arthur)<br>-Drag&Drop et LocalStorage (Marvin&Arthur)</p>
